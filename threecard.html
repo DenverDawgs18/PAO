@@ -4,23 +4,32 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
+        <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-        <nav>
-            <a href="/index.html">Home</a>
-            <a href="/twonum.html">Two Numbers</a>
-            <a href="/sixnum.html">Six Numbers</a>
-            <a href="/onecard.html">One Card</a>
-            <a href="/threecard.html">Three Card</a>
-        </nav>
-        <img src="" alt="" id="threecardimgone">
-        <img src="" alt="" id="threecardimgtwo">
-        <img src="" alt="" id="threecardimgthree">
-        <form id="threecardform">
-            <input type="text" id="threecardguess" autocomplete='off'>
-            <button type="submit">Submit</button>
-        </form>
-        <h4 id="threecardcorrect"></h4>
+        <div class="header">
+            <nav class="nav">
+                <a href="/index.html">Home</a>
+                <a href="/twonum.html">Two Numbers</a>
+                <a href="/sixnum.html">Six Numbers</a>
+                <a href="/onecard.html">One Card</a>
+                <a href="/threecard.html">Three Card</a>
+            </nav>
+        </div>
+        <div class="main">
+            <div class="imgs">
+                <img src="" alt="" id="threecardimgone">
+                <img src="" alt="" id="threecardimgtwo">
+                <img src="" alt="" id="threecardimgthree">
+            </div>    
+            <div class="form">
+                <form id="threecardform">
+                    <input type="text" id="threecardguess" autocomplete='off'>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+            <h4 id="threecardcorrect"></h4>
+        </div>
         <script type="module" src="./threecard.js"></script>
     </body>
 </html>

@@ -3,22 +3,28 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
         <title>Document</title>
     </head>
     <body>
-        <nav>
-            <a href="/index.html">Home</a>
-            <a href="/twonum.html">Two Numbers</a>
-            <a href="/sixnum.html">Six Numbers</a>
-            <a href="/onecard.html">One Card</a>
-            <a href="/threecard.html">Three Card</a>
-        </nav>
-        <img src="" alt="" id="onecardimg">
-        <form id="onecardform">
-            <input type="text" id="onecardguess" autocomplete='off'>
-            <button type="submit">Submit</button>
-        </form>
-        <h4 id="onecardcorrect"></h4>
+        <div class="header">
+            <nav class="nav">
+                <a href="/index.html">Home</a>
+                <a href="/twonum.html">Two Numbers</a>
+                <a href="/sixnum.html">Six Numbers</a>
+                <a href="/onecard.html">One Card</a>
+                <a href="/threecard.html">Three Card</a>
+            </nav>
+        </div>
+        <div class="main">
+            <img src="" alt="" id="onecardimg">
+            <form id="onecardform">
+                <input type="text" id="onecardguess" autocomplete='off'>
+                <button type="submit">Submit</button>
+            </form>
+            <h4 id="onecardcorrect"></h4>
+        </div>
+       
         <script type="module" src="./onecard.js"></script>
     </body>
 </html>
