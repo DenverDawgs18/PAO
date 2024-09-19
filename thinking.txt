@@ -1,0 +1,7 @@
+3 arrays - (person, action, object)
+
+website needs to have 4 sections - one to generate numbers one for the cards (indvidual) one for sets of cards, 
+one for 6 numbers
+
+numbers - generate random number enter in PAO check against arrays
+same for cards 
