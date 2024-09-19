@@ -90,6 +90,8 @@ function threeCard(){
         let guess = document.querySelector('#threecardguess').value;
         if (guess == threeCardCorrect){
             location.reload()
+            const threeCardInput = document.querySelector("threecardguess")
+            threeCardInput.focus()
         } else{
             document.querySelector("#threecardcorrect").textContent = threeCardCorrect;
         }
