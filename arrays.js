@@ -105,7 +105,7 @@ let people = [
 let ac = "swinging falling spinning aiming unlocking detonating writing splitting batghing smoking walking up riding floating grilling picking up gluing throwing fumbling slinging opening dunking shooting stepping on slithering on making checking the time lifting covering themselves waving playing pouring putting on stretching benching pulling  watching slicing racing burning closing jumping sneezing drinking sliding on yelling walking out burning down drawing eating scanning sprinting through setting down tweeting on printing paying announcing slicking back remembering ryping staring serving mopping slapping stanning putting together reading answering putting the fries in the making praying drinking blocking shooting stopping guarding wielding drviing breaking off blowing up stealing lasering shooting up splitting in half popping dropping wearing reviewing putting taking picutre with buliding pointing teleporting toasting fighting sucking on bobbing touching scanning swimming shooting an arrow"
 let actions = [
     "swinging",
-    "falling",
+    "falling down",
     "spinning",
     "aiming",
     "unlocking",
@@ -241,7 +241,7 @@ let objects = [
     "ranch",
     "medal",
     "hamstring",
-    "table",
+    "bench",
     "Mack truck",
     "film",
     "meat",

@@ -22,3 +22,18 @@ a{
     gap: 20px;
     padding-top: 20px;
 }
+.guess{
+    border-radius: 3px;
+    border: 2px solid black;
+    padding-left: 3px;
+    margin-right: 10px;
+    
+}
+.submit{
+    padding: 10px;
+    border-radius: 15px;
+    border: 2px solid black;
+    background-color: rgb(55, 248, 255);
+    color: black;
+
+}
