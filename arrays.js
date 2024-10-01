@@ -246,7 +246,7 @@ let objects = [
     "film",
     "meat",
     "pod racer",
-    "in lava",
+    "lava",
     "door",
     "bed",
     "glitter",

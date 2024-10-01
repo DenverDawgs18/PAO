@@ -77,25 +77,32 @@ function oneCard(){
     })
 }
 
-function threeCard(){
+function threeCard(callback){
+    const threeCardInput = document.querySelector("#threecardguess");
+    threeCardInput.value = ''
+    threeCardInput.focus()
+    const threeCardCor = document.querySelector("#threecardcorrect")
+    threeCardCor.textContent = ''
     let [imgOne, imgTwo, imgThree] = [document.querySelector('#threecardimgone'), document.querySelector('#threecardimgtwo'),
         document.querySelector('#threecardimgthree')];
     let [numOne, numTwo, numThree] = [getMaxNumber(52), getMaxNumber(52), getMaxNumber(52)];
+    while (numOne == numTwo) {
+        numTwo = getMaxNumber(52)
+    }
+    while (numThree == numOne){
+        numThree = getMaxNumber(52)
+    }
+    while (numTwo == numThree) {
+        numTwo = getMaxNumber(52)
+    }
     [imgOne.src, imgTwo.src, imgThree.src] = ['fronts/' + imagePaths[numOne], 'fronts/' + imagePaths[numTwo],
      'fronts/' + imagePaths[numThree]]
     let threeCardCorrect = people[numOne] + " " +  actions[numTwo] + " " + objects[numThree]
-    let threeCardForm = document.querySelector("#threecardform");
-    threeCardForm.addEventListener("submit", (e) => {
-        e.preventDefault()
-        let guess = document.querySelector('#threecardguess').value;
-        if (guess == threeCardCorrect){
-            location.reload()
-            const threeCardInput = document.querySelector("threecardguess")
-            threeCardInput.focus()
-        } else{
-            document.querySelector("#threecardcorrect").textContent = threeCardCorrect;
-        }
-    })
+    window.currentThreeCardCorrect = threeCardCorrect;
+    window.currentCallback = callback;
+    
+       
+    
 }
 
 export {twoNum, sixNum, oneCard, threeCard}
