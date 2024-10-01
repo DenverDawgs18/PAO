@@ -11,9 +11,7 @@ threeCardForm.addEventListener('submit', (e) => {
     let guess = document.querySelector('#threecardguess').value;
     let threeCardCorrect = window.currentThreeCardCorrect;
     let correctWords = threeCardCorrect.split(" ")
-    console.log(correctWords)
     let guessSplit = guess.split(" ")
-    console.log(guessSplit)
     let check = true;
     if (!correctWords.every(a => guessSplit.includes(a))) { 
                 check = false;

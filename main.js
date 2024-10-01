@@ -16,7 +16,12 @@ function getNumOfDigits(digits){
 }
 
 
-function twoNum(){
+function twoNum(callback){
+    const twoNumInput = document.querySelector("#twonumguess");
+    twoNumInput.value = ''
+    twoNumInput.focus()
+    const twoNumCor = document.querySelector("#twonumcorrect")
+    twoNumCor.textContent = ''
     let two = getMaxDigitNumber(2);
     let realpN = two;
     let realp = people[Number(realpN) - 1];
@@ -25,20 +30,16 @@ function twoNum(){
     let reals = realp + " " + reala + " " + realo;
     let twoText = document.querySelector('.twonum')
     twoText.textContent = two;
-    let form = document.querySelector("#twonumform")
-    form.addEventListener("submit", (e) => {
-        e.preventDefault()
-        let guess = document.querySelector('#twonumguess').value;
-        console.log(guess)
-        if (guess == reals){
-            location.reload()
-        } else{
-            document.querySelector("#twonumcorrect").textContent = reals
-        }
-    })
+    window.currentTwoNumCorrect = reals
+    window.currentTwoNumCallback = callback
 }
 
-function sixNum(){
+function sixNum(callback){
+    const sixNumInput = document.querySelector("#sixnumguess");
+    sixNumInput.value = ''
+    sixNumInput.focus()
+    const sixNumCor = document.querySelector("#sixnumcorrect")
+    sixNumCor.textContent = ''
     let six = String(getMaxDigitNumber(6))
     let srealp = people[Number(six.slice(0,2)) - 1]
     let sreala = actions[Number(six.slice(2,4)) - 1]
@@ -46,35 +47,24 @@ function sixNum(){
     let sreal = srealp + " " + sreala + " " + srealo
     let sixText = document.querySelector('.sixnum')
     sixText.textContent = six;
-    let sixForm = document.querySelector("#sixnumform")
-    sixForm.addEventListener("submit", (e) => {
-        e.preventDefault()
-        let guess = document.querySelector('#sixnumguess').value;
-        console.log(sreal)
-        if (guess == sreal){
-            location.reload()
-        } else{
-            document.querySelector("#sixnumcorrect").textContent = sreal
-        }
-    })
+    window.currentSixNumCorrect = sreal;
+    window.currentSixNumCallback = callback;
 }
 
-function oneCard(){
+function oneCard(callback){
+    const oneCardInput = document.querySelector("#onecardguess");
+    oneCardInput.value = ''
+    oneCardInput.focus()
+    const oneCardCor = document.querySelector("#onecardcorrect")
+    oneCardCor.textContent = ''
     let oneCardImg = document.querySelector("#onecardimg");
     let oneCardNum = getMaxNumber(52);
     let imgPath = imagePaths[oneCardNum];
     let oneCardCorrect = people[oneCardNum] + " " + actions[oneCardNum] + " " + objects[oneCardNum];
+    window.currentOneCardCorrect = oneCardCorrect;
+    window.currentOneCardCallback = callback;
     oneCardImg.src = 'fronts/' + imgPath;
-    let oneCardForm = document.querySelector("#onecardform");
-    oneCardForm.addEventListener("submit", (e) => {
-        e.preventDefault()
-        let guess = document.querySelector('#onecardguess').value;
-        if (guess == oneCardCorrect){
-            location.reload()
-        } else{
-            document.querySelector("#onecardcorrect").textContent = oneCardCorrect;
-        }
-    })
+    
 }
 
 function threeCard(callback){
