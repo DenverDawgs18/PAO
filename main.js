@@ -99,7 +99,7 @@ function threeCard(callback){
      'fronts/' + imagePaths[numThree]]
     let threeCardCorrect = people[numOne] + " " +  actions[numTwo] + " " + objects[numThree]
     window.currentThreeCardCorrect = threeCardCorrect;
-    window.currentCallback = callback;
+    window.currentThreeCardCallback = callback;
     
        
     
