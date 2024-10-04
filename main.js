@@ -94,5 +94,27 @@ function threeCard(callback){
        
     
 }
+function deckShuffle() {
+    let alrUsed = []
+    let imgDiv = document.querySelector('.images')
+    for (let i = 0; i < 52; i++){
+        let num = getMaxNumber(52)
+        while (alrUsed.includes(num)) {
+            num = getMaxNumber(52)
+        }
+        alrUsed.push(num)
+    }
+    let imgPaths = []
+    for (let i = 0; i < 52; i++) {
+        imgPaths.push('fronts/' + imagePaths[alrUsed[i]])
+    }
+    console.log(imgPaths)
+    for (let i = 0; i < 52; i++) {
+        let img = document.createElement('img')
+        img.classList = 'oneDeckImg'
+        img.src = imgPaths[i]
+        imgDiv.appendChild(img)
+    }
+}
 
-export {twoNum, sixNum, oneCard, threeCard}
+export {twoNum, sixNum, oneCard, threeCard, deckShuffle}
