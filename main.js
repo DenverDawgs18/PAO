@@ -108,13 +108,82 @@ function deckShuffle() {
     for (let i = 0; i < 52; i++) {
         imgPaths.push('fronts/' + imagePaths[alrUsed[i]])
     }
-    console.log(imgPaths)
     for (let i = 0; i < 52; i++) {
         let img = document.createElement('img')
         img.classList = 'oneDeckImg'
         img.src = imgPaths[i]
         imgDiv.appendChild(img)
     }
+    let correct = []
+    for (let i = 0; i < imgPaths.length; i++) {
+        let start = imgPaths[i].slice(7,11)
+        console.log(start)
+        let tenCheck = start.slice(3,4)
+        if (tenCheck !== '.'){
+            correct.push(start.slice(0, 2) + start.slice(3,4))
+        }
+        else{
+            if(start.slice(0,1) == 'r') {
+                correct.push('k' + start.slice(2,3))
+            }
+            else if (start.slice(0,1) == '1') {
+                correct.push('a' + start.slice(2,3))
+            }
+            else{
+                correct.push(start.slice(0,1) + start.slice(2,3))
+            }
+           
+        }
+    }
+    console.log(correct)
+    let correctString = correct.join(' ')
+    document.querySelector('#deckform').addEventListener('submit', (e) => {
+        e.preventDefault()
+        let guess = document.querySelector('#deckguess').value
+        if (guess !== correctString) {
+            document.querySelector('#deckincorrect').textContent = 'Incorrect'
+        }
+        
+        
+    })
+    document.querySelector('#hidedeck').addEventListener('click', (e) => {
+        imgDiv.replaceChildren('')
+    })
+    document.querySelector('#showdeck').addEventListener('click', (e) => {
+        for (let i = 0; i < 52; i++) {
+            let img = document.createElement('img')
+            img.classList = 'oneDeckImg';
+            img.src = imgPaths[i];
+            imgDiv.appendChild(img)
+        }
+    })
+}
+function numOfDigits(num) {
+    let number = getNumOfDigits(num)
+    let numberDiv = document.querySelector('#numberdiv');
+    let digitsDiv = document.querySelector('#digits');
+    digitsDiv.style.display = 'block';
+    let numberFormDiv = document.querySelector('#numbersformdiv');
+    numberFormDiv.style.display = 'none';
+    let numberText = document.createElement('h2');
+    numberText.textContent = number;
+    numberDiv.appendChild(numberText)
+    document.querySelector('#digitsform').addEventListener('submit', (e) => {
+        e.preventDefault()
+        let guess = document.querySelector('#digitsguess').value;
+        if (number !== guess) {
+            document.querySelector('#digitsincorrect').textContent = 'Incorrect';
+        }
+    } )
+    document.querySelector('#hidenumbers').addEventListener('click', () => {
+        numberDiv.replaceChildren()
+    })
+    document.querySelector('#shownumbers').addEventListener('click', () => {
+        numberText = document.createElement('h2')
+        numberText.textContent = number
+        numberDiv.appendChild(numberText)
+    })
+
 }
 
-export {twoNum, sixNum, oneCard, threeCard, deckShuffle}
+export {twoNum, sixNum, oneCard, threeCard, deckShuffle, numOfDigits}

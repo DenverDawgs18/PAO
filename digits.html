@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="header">
+        <nav class="nav">
+            <a href="/index.html">Home</a>
+            <a href="/twonum.html">Two Numbers</a>
+            <a href="/sixnum.html">Six Numbers</a>
+            <a href="/onecard.html">One Card</a>
+            <a href="/threecard.html">Three Card</a>
+            <a href="/deck.html">One Deck</a>
+            <a href="/digits.html"># of Numbers</a>
+        </nav>
+    </div>
+    <div id="numbersformdiv">
+        <h3>Request amount of numbers: </h3>
+        <form id="numbersform">
+            <input type="text" id="numbersreq">
+            <button type="submit">Submit</button>
+        </form>
+        
+    </div>
+    <div id="digits">
+        <div id="numberdiv">
+
+        </div>
+        <button id="hidenumbers">Hide Numbers</button>
+        <button id="shownumbers">Show Numbers</button>
+        <form id="digitsform">
+            <input type="text" id="digitsguess">
+            <button type="submit">Submit</button>
+        </form>
+        <h4 id="digitsincorrect"></h4>
+    </div>
+    
+    <script type="module" src="digits.js"></script>
+</body>
+</html>
