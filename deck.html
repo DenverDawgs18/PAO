@@ -15,18 +15,29 @@
             <a href="/onecard.html">One Card</a>
             <a href="/threecard.html">Three Card</a>
             <a href="/deck.html">One Deck</a>
+            <a href="/digits.html"># of Numbers</a>
         </nav>
     </div>
-    <button id="hidedeck">Hide Deck</button>
-    <button id="showdeck">Show Deck</button>
-    <div class="images">
+    <div class="deckmain">
+        <div class="showhide">
+            <button id="hidedeck" class="hideshow">Hide Deck</button>
+            <button id="showdeck" class="hideshow">Show Deck</button>
+        </div>
+        <div class="formdeck">
+            <form id="deckform">
+                <input type="text" id="deckguess" class="guess">
+                <button type="submit" class="submit">Submit</button>
+            </form>  
+            <h4 id="deckincorrect" class="correct"></h4>  
+        </div>
+        
+        
+        <div class="images">
+            
+        </div>
         
     </div>
-    <form id="deckform">
-        <input type="text" id="deckguess">
-        <button type="submit">Submit</button>
-    </form>
-    <h4 id="deckincorrect"></h4>
+    
 
     <script type="module" src="./deck.js"></script>
 </body>

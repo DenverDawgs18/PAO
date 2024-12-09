@@ -193,7 +193,7 @@ let actions = [
     "reviewing",
     "putting",
     "taking picture with",
-    "buliding",
+    "building",
     "pointing",
     "teleporting",
     "toasting",

@@ -12,8 +12,16 @@ a{
 
 }
 .twonum,.sixnum{
+    font-size: 60px;
+    font-weight: normal;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.streak,.longestStreak,.reqtxt{
+    font-weight: normal;
     font-size: 30px;
 }
+
 .main{
     display: flex;
     justify-content: center;
@@ -23,13 +31,16 @@ a{
     padding-top: 20px;
 }
 .guess{
+    width: 300px;
+    height: 30px;
+    font-size: 18px;
     border-radius: 3px;
     border: 2px solid black;
     padding-left: 3px;
     margin-right: 10px;
     
 }
-.submit{
+.submit,.hideshow{
     padding: 10px;
     border-radius: 15px;
     border: 2px solid black;
@@ -43,4 +54,57 @@ a{
 }
 #digits{
     display: none;
+}
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+#numbersformdiv{
+    display: flex;
+}
+#digits{
+    margin-top: 50px;
+    gap: 20px;
+}
+.deckmain{
+    display: flex;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+.images{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+#numberdiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+#numbersformdiv,#digits,.deckmain{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.numbertxt{
+    font-size: 24px;
+    font-weight: normal;
+    word-wrap: break-word;
+    white-space: normal;
+    width: 90vw;
+}
+.correct{
+    font-weight: normal;
+    font-size: 24px;
+}
+
+@media (width <= 600px) {
+    a{
+        font-size: 12px;
+    }
 }

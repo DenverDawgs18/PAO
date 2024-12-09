@@ -1,3 +1,6 @@
-Deck of cards
-Number of digits
-Take it all to django and make it so user's can have different PAOs
+Style One Deck, # of Numbers
+Make it responsive
+Fix nav bar on smaller screen size
+
+
+Take it all to django and make it so user's can have different PAOs - Maybe

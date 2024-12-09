@@ -117,7 +117,6 @@ function deckShuffle() {
     let correct = []
     for (let i = 0; i < imgPaths.length; i++) {
         let start = imgPaths[i].slice(7,11)
-        console.log(start)
         let tenCheck = start.slice(3,4)
         if (tenCheck !== '.'){
             correct.push(start.slice(0, 2) + start.slice(3,4))
@@ -135,8 +134,8 @@ function deckShuffle() {
            
         }
     }
-    console.log(correct)
     let correctString = correct.join(' ')
+    console.log(correctString)
     document.querySelector('#deckform').addEventListener('submit', (e) => {
         e.preventDefault()
         let guess = document.querySelector('#deckguess').value
@@ -162,10 +161,11 @@ function numOfDigits(num) {
     let number = getNumOfDigits(num)
     let numberDiv = document.querySelector('#numberdiv');
     let digitsDiv = document.querySelector('#digits');
-    digitsDiv.style.display = 'block';
+    digitsDiv.style.display = 'flex';
     let numberFormDiv = document.querySelector('#numbersformdiv');
     numberFormDiv.style.display = 'none';
     let numberText = document.createElement('h2');
+    numberText.classList = 'numbertxt';
     numberText.textContent = number;
     numberDiv.appendChild(numberText)
     document.querySelector('#digitsform').addEventListener('submit', (e) => {

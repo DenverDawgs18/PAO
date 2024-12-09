@@ -19,24 +19,30 @@
         </nav>
     </div>
     <div id="numbersformdiv">
-        <h3>Request amount of numbers: </h3>
+        <h3 class="reqtxt">Request amount of numbers: </h3>
         <form id="numbersform">
-            <input type="text" id="numbersreq">
-            <button type="submit">Submit</button>
+            <input type="text" id="numbersreq" class="guess">
+            <button type="submit" class="submit">Submit</button>
         </form>
         
     </div>
     <div id="digits">
+        
+        <div class="showhide">
+            <button id="hidenumbers" class="hideshow">Hide Numbers</button>
+            <button id="shownumbers" class="hideshow">Show Numbers</button>
+        </div>
+        <div class="formdigits">
+            <form id="digitsform">
+                <input type="text" id="digitsguess" class="guess">
+                <button type="submit" class="submit">Submit</button>
+            </form>
+            <h4 id="digitsincorrect" class="correct"></h4>
+        </div>
+        
         <div id="numberdiv">
 
         </div>
-        <button id="hidenumbers">Hide Numbers</button>
-        <button id="shownumbers">Show Numbers</button>
-        <form id="digitsform">
-            <input type="text" id="digitsguess">
-            <button type="submit">Submit</button>
-        </form>
-        <h4 id="digitsincorrect"></h4>
     </div>
     
     <script type="module" src="digits.js"></script>
