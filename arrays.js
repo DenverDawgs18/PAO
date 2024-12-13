@@ -363,7 +363,71 @@ let imagePaths = [
     "rcs.svg",
     "rdc.svg"
 ]
+let cards = [
+    "ad",
+    "ah",
+    "as",
+    "ac",
+    "2d",
+    "2h",
+    "2s",
+    "2c",
+    "3d",
+    "3h",
+    "3s",
+    "3c",
+    "4d",
+    "4h",
+    "4s",
+    "4c",
+    "5d",
+    "5h",
+    "5s",
+    "5c",
+    "6d",
+    "6h",
+    "6s",
+    "6c",
+    "7d",
+    "7h",
+    "7s",
+    "7c",
+    "8d",
+    "8h",
+    "8s",
+    "8c",
+    "9d",
+    "9h",
+    "9s",
+    "9c",
+    "10d",
+    "10h",
+    "10s",
+    "10c",
+    "jd",
+    "jh",
+    "js",
+    "jc",
+    "qd",
+    "qh",
+    "qs",
+    "qc",
+    "kd",
+    "kh",
+    "ks",
+    "kc"
+]
 /*
+let prefixes = ['a', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'j', 'q', 'r'];
+let suits = ['d', 'h', 's', 'c']
+let newarr = [];
+for (let i = 1; i <= 13; i++){
+    for (let j = 1; j <= 4; j++) {
+        newarr.push(prefixes[i - 1] + suits[j - 1])
+    }
+}
+console.log(newarr)
+
 let prefixes = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'j', 'q', 'r'];
 let images = []
 need to loop over prefixes 
@@ -394,4 +458,4 @@ console.log(images.reduce(function(a, b) {
     return a.concat(b)
 }))
 */
-export {people, actions, objects, imagePaths}
+export {people, actions, objects, imagePaths, cards}

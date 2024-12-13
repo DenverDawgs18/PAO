@@ -1,4 +1,4 @@
-import {people, actions, objects, imagePaths} from './arrays.js'
+import {people, actions, objects, imagePaths, cards} from './arrays.js'
 
 function getMaxDigitNumber(digits){
     let max = 10 ** digits
@@ -64,6 +64,21 @@ function oneCard(callback){
     window.currentOneCardCorrect = oneCardCorrect;
     window.currentOneCardCallback = callback;
     oneCardImg.src = 'fronts/' + imgPath;
+    
+}
+
+function decoder(callback){
+    const decoderInput = document.querySelector('#decoderguess');
+    decoderInput.value = '';
+    decoderInput.focus();
+    const decoderCor = document.querySelector('#decodercorrect');
+    decoderCor.textContent = '';
+    let decoderNum = getMaxNumber(52);
+    const decoderText = document.querySelector('#decodertext');
+    decoderText.textContent = people[decoderNum] + " " + actions[decoderNum] + " " + objects[decoderNum];
+    let decoderCorrect = cards[decoderNum]
+    window.currentDecoderCorrect = decoderCorrect
+    window.currentDecoderCallback = callback;
     
 }
 
@@ -186,4 +201,4 @@ function numOfDigits(num) {
 
 }
 
-export {twoNum, sixNum, oneCard, threeCard, deckShuffle, numOfDigits}
+export {twoNum, sixNum, oneCard, decoder, threeCard, deckShuffle, numOfDigits}

@@ -39,4 +39,4 @@ function startOneCard ()  {oneCard(function(result) {
         longestStreakh.textContent = 'Longest streak: ' + longestStreak
     })
     }
-    startOneCard()
+startOneCard()
