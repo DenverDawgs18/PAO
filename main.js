@@ -196,6 +196,8 @@ function numOfDigits(num) {
     document.querySelector('#shownumbers').addEventListener('click', () => {
         numberText = document.createElement('h2')
         numberText.textContent = number
+        numberText.classList = 'numbertxt'
+        document.querySelector('#digitsincorrect').textContent = ''
         numberDiv.appendChild(numberText)
     })
 
